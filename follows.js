@@ -325,17 +325,7 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 
-					$('#feed-' + data.id + ' .duration-minute5').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '5min', 5);
-						return false;
-					});
-
-					$('#feed-' + data.id + ' .duration-minute30').click(function() {
-						$('#loadingData').foundation('reveal', 'open');
-						updateFeeds(data.id, thisFeedDatastreams, '30min', 5);
-						return false;
-					});
+				
 					
 					$('#feed-' + data.id + ' .duration-minute').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
