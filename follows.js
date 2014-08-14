@@ -83,6 +83,8 @@
 					var updated = new Date;
 					updated = updated.parseISO(datastream.at);
 					var diff = null;
+					if(duration == '5min') diff = 300000;
+					if(duration == '30min') diff = 1800000;
 					if(duration == '1hour') diff = 3600000;
 					if(duration == '6hours') diff = 21600000;
 					 if(duration == '1day') diff = 86400000;
@@ -323,7 +325,19 @@
 							$('#feed-' + data.id + ' .map').addClass('hidden');
 					}
 
-					$('#feed-' + data.id + ' .duration-minute').click(function() {
+					$('#feed-' + data.id + ' .duration-minute5').click(function() {
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '5min', 5);
+						return false;
+					});
+
+					$('#feed-' + data.id + ' .duration-minute30').click(function() {
+						$('#loadingData').foundation('reveal', 'open');
+						updateFeeds(data.id, thisFeedDatastreams, '30min', 5);
+						return false;
+					});
+					
+					$('#feed-' + data.id + ' .duration-minute60').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1hour', 5);
 						return false;
