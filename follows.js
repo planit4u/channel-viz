@@ -337,7 +337,7 @@
 						return false;
 					});
 					
-					$('#feed-' + data.id + ' .duration-minute60').click(function() {
+					$('#feed-' + data.id + ' .duration-minute').click(function() {
 						$('#loadingData').foundation('reveal', 'open');
 						updateFeeds(data.id, thisFeedDatastreams, '1hour', 5);
 						return false;
