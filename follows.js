@@ -151,11 +151,12 @@
 										element: document.querySelector('#graph-' + feedId + '-' + datastream.id),
 										width: 600,
 										height: 400,
-										renderer: 'area',
-										min: parseFloat(datastream.min_value) - .25,
-										max: parseFloat(datastream.max_value) + .25,
+										renderer: 'line',
+										min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.min_value)),
+										max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value)),
 										//min: parseFloat(datastream.min_value) - .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
 										//max: parseFloat(datastream.max_value) + .25*(parseFloat(datastream.max_value) - parseFloat(datastream.min_value)),
+										
 										
 										padding: {
 											top: 0.02,
